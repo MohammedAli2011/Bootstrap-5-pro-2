@@ -431,25 +431,13 @@ header .container nav form svg {
 
 /* start skills */
 
-.Our-skills .container .Skills .Prog-holder {
-    margin-bottom: 40px;
-}
-
-.Our-skills .container .Skills .Prog-holder h4 {
-    font-weight: normal;
-    margin-bottom: 15px;
-}
-
 .Our-skills .container .Skills .Prog-holder .Prog {
     background-color: #ddd;
     height: 40px;
 }
 
 .Our-skills .container .Skills .Prog-holder .Prog span {
-    display: block;
-    position: relative;
     background-color: var(--main-color);
-    height: 100%;
 }
 
 .Our-skills .container .Skills .Prog-holder .Prog span::before {
