@@ -2,82 +2,48 @@
     header .container nav .toggle-menu {
         display: none !important;
     }
-}
 
-@media (max-width:767px) {
-    header .container nav ul {
-        display: none !important;
+    .Portfolio .Images-container .Box {
+        flex-basis: 50%;
+    }
+
+    .Stats .container .Box {
+        flex-basis: 49%;
+        margin-right: 5px;
+        margin-top: 5px;
     }
 }
 
 @media (max-width: 991px) {
     .Landing .Text {
         width: 100% !important;
-        justify-content: center!important;
-        text-align: center!important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 }
 
 @media (max-width: 767px) {
+    header .container nav ul {
+        display: none !important;
+    }
+
     .Landing .Text {
-        text-align: left!important;
+        text-align: left !important;
     }
-}
 
-@media (max-width: 767px) {
     .Landing .change-background {
         display: none !important;
     }
-}
 
-@media (min-width: 767px) {
-    .Services .container .Services-content {
-        display: grid!important;
-        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr))!important;
-        gap: 60px 40px!important;
-    }
-}
-
-@media (max-width: 991px) {
-    .Services .container .Services-content .Srv-Box {
-        display: flex !important;
-        flex-direction: column!important;
-        text-align: center !important;
-        align-items: center !important;
-        margin-bottom: 30px!important;
-    }
-
-    .Services .container .Services-content .Srv-Box svg {
-        margin: 0 0 30px !important;
-    }
-}
-
-@media (max-width: 767px) {
     .Design .Image {
-        display: none!important;
+        display: none !important;
     }
-}
 
-@media (min-width: 768px) {
-    .Portfolio .Images-container .Box {
-        flex-basis: 50%;
-    }
-}
-
-@media (min-width: 1199px) {
-    .Portfolio .Images-container .Box {
-        flex-basis: 25%;
-    }
-}
-
-@media (max-width: 767px) {
     .About .container img {
         bottom: -60px;
         margin-top: -60px;
     }
-}
 
-@media (max-width: 767px) {
     .Stats .container .Box {
         width: 100%;
     }
@@ -86,50 +52,12 @@
         margin-right: 0;
         margin-bottom: 5px;
     }
-}
 
-@media (min-width: 768px) {
-    .Stats .container .Box {
-        flex-basis: 49%;
-        margin-right: 5px;
-        margin-top: 5px;
-    }
-}
-
-@media (min-width: 992px) {
-    .Stats .container .Box {
-        flex-basis: 49%;
-        margin-right: 5px;
-        margin-top: 5px;
-    }
-}
-
-@media (min-width: 1199px) {
-    .Stats .container .Box {
-        flex-basis: 24%;
-    }
-}
-
-@media (min-width: 992px) {
-    .Our-skills .container>div {
-        flex-basis: 45%;
-    }
-}
-
-@media (max-width: 767px) {
     .Our-skills .container .Testimonials .Content {
         flex-direction: column;
         text-align: center;
     }
-}
 
-.Our-skills .container .Testimonials .Content .Image {
-    width: 100px;
-    height: 100px;
-    margin-right: 50px;
-}
-
-@media (max-width: 767px) {
     .Our-skills .container .Testimonials .Content .Image {
         margin-right: 0;
         margin-bottom: 50px;
@@ -139,12 +67,80 @@
         margin-top: 30px;
     }
 
-}
-
-@media (max-width: 767px) {
     .Quote .container q {
         font-size: 20px;
     }
+
+    .Contact .container .Content {
+        flex-direction: column;
+    }
+
+    .Contact .container .Content .Info {
+        order: -1;
+        text-align: center;
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+
+    .Contact .container .Content .Info .Address {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 767px) {
+    .Services .container .Services-content {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)) !important;
+        gap: 60px 40px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .Services .container .Services-content .Srv-Box {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        margin-bottom: 30px !important;
+    }
+
+    .Services .container .Services-content .Srv-Box svg {
+        margin: 0 0 30px !important;
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1199px) {
+    .Portfolio .Images-container .Box {
+        flex-basis: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .Stats .container .Box {
+        flex-basis: 49%;
+        margin-right: 5px;
+        margin-top: 5px;
+    }
+
+    .Our-skills .container>div {
+        flex-basis: 45%;
+    }
+}
+
+@media (min-width: 1199px) {
+    .Stats .container .Box {
+        flex-basis: 24%;
+    }
+}
+
+.Our-skills .container .Testimonials .Content .Image {
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
 }
 
 @media (max-width: 991px) {
@@ -157,28 +153,5 @@
 @media (max-width: 991px) {
     .Subscripe .container p {
         margin: 30px 0 0 !important;
-    }
-}
-
-@media (max-width: 767px) {
-    .Contact .container .Content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 767px) {
-    .Contact .container .Content .Info {
-        order: -1;
-        text-align: center;
-        display: flex;
-        margin-bottom: 50px;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 767px) {
-    .Contact .container .Content .Info .Address {
-        margin-top: 0;
-        margin-left: 20px;
     }
 }
