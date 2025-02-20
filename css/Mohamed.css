@@ -1,0 +1,872 @@
+/* Start variables */
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: #0f748fb3;
+    --text-color: #777;
+    --main-padding: 100px;
+}
+
+/* End variables */
+
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* End Global Rules */
+
+/* Start Components */
+
+/* Here is the beginning part about Mohammed's logo */
+
+.Logo div svg {
+    color: var(--main-color);
+    font-size: 45px;
+    transform: skewX(165deg);
+}
+
+.Logo div i::before {
+    content: "\f6e2";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+.Logo div span {
+    transform: skewX(165deg);
+    font-family: "Pacifico", cursive;
+    top: -15px;
+}
+
+.Logo .Text {
+    top: 40px;
+    left: 45px;
+    font-family: 'Open Sans';
+    color: var(--main-color);
+}
+
+/* Here is the ending part about Mohammed's logo */
+
+/* Start main heading */
+.Section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.Main-heading {
+    text-align: center;
+}
+
+.Main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.Main-heading h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 120px;
+    bottom: -30px;
+    background-color: black;
+}
+
+.Main-heading h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border: 2px solid black;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    bottom: -40px;
+}
+
+.Main-heading p {
+    width: 550px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+    line-height: 2;
+    color: var(--text-color);
+}
+
+/* End main heading */
+
+/* End Components */
+
+/*************** Start nav ***************/
+header {
+    z-index: 2;
+}
+
+header .container {
+    max-height: 103px;
+}
+
+header .container::after {
+    content: "";
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 30px);
+    background-color: #a2a2a2
+}
+
+header .container nav {
+    flex: 1;
+}
+
+header .container nav .toggle-menu:hover+ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+header .container nav ul li a {
+    font-size: 14px;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+header .container nav ul li a:hover,
+header .container nav ul li a.Active {
+    color: var(--main-color) !important;
+    border-bottom: 1px solid var(--main-color);
+}
+
+header .container nav form {
+    height: 30px;
+    width: 40px;
+    border-left: 1px solid white;
+}
+
+header .container nav form svg {
+    cursor: pointer;
+}
+
+/*************** End nav ***************/
+
+/*************** Start landing ***************/
+.Landing {
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.Landing .Overly {
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.Landing .Text {
+    transform: translateY(-50%);
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+.Landing .Text .Content {
+    max-width: 500px;
+}
+
+.Landing .change-background {
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.Landing svg:nth-of-type(1) {
+    left: 30px;
+}
+
+.Landing svg:nth-of-type(2) {
+    right: 30px;
+}
+
+.Landing .Bullets {
+    transform: translateX(-50%);
+    bottom: 30px;
+    width: calc(60px + 20px);
+}
+
+.Landing .Bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ddd;
+}
+
+.Landing .Bullets li.Active {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/*************** End landing ***************/
+
+/*************** Start services ***************/
+.Services .container .Services-content .Srv-Box svg {
+    margin-right: 50px;
+}
+
+.Services .container .Services-content .Srv-Box .Text h3 {
+    color: var(--main-color);
+}
+
+.Services .container .Services-content .Srv-Box .Text p {
+    color: var(--text-color);
+}
+
+/*************** End services ***************/
+
+/*************** Start design ***************/
+.Design {
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    height: 600px;
+}
+
+.Design::before {
+    content: "";
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.Design .Image img {
+    bottom: -150px;
+    width: 338px;
+}
+
+.Design .Text {
+    background-color: var(--transparent-color);
+    padding: 50px;
+}
+
+.Design .Image,
+.Design .Text {
+    flex: 1;
+    z-index: 2;
+}
+
+.Design .Text ul li::before {
+    content: "\f108";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+
+/*************** End design ***************/
+
+/*************** Start portfolio ***************/
+.Portfolio .container .Shuffle li {
+    border: 1px solid white;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.Portfolio .container .Shuffle li:hover,
+.Portfolio .container .Shuffle li.Active {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: white;
+}
+
+.Portfolio .Images-container {
+    margin-top: 60px;
+}
+
+.Portfolio .Images-container .Box {
+    cursor: pointer;
+}
+
+.Portfolio .Images-container .Box:hover .Caption {
+    bottom: 0;
+}
+
+.Portfolio .Images-container .Box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+.Portfolio .Images-container .Box img {
+    transition: 0.3s;
+}
+
+.Portfolio .Images-container .Box .Caption {
+    bottom: -100px;
+    transition: 0.3s;
+}
+
+.Portfolio .Images-container .Box .Caption p {
+    color: var(--main-color);
+}
+
+.Portfolio .More {
+    background-color: var(--main-color);
+    width: fit-content;
+}
+
+/*************** End portfolio ***************/
+
+/*************** Start video ***************/
+.Video::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+
+.Video .Text {
+    transform: translateY(-50%);
+    background-color: var(--transparent-color);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.Video .Text button {
+    box-shadow: -5px -5px 1px 1px #00000052;
+    cursor: pointer;
+}
+
+/*************** End video ***************/
+
+/*************** Start about ***************/
+.About {
+    padding-top: var(--main-padding);
+}
+
+.About .container img {
+    bottom: -120px;
+    margin-top: -120px;
+}
+
+/*************** End about ***************/
+
+/*************** Start stats ***************/
+.Stats {
+    background-image: url(../images/stats.png);
+    background-size: cover;
+}
+
+.Stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+
+.Stats .container .Box {
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+/*************** End stats ***************/
+
+/*************** Start skills ***************/
+.Our-skills .container>div>p {
+    color: var(--text-color);
+    margin-bottom: 60px;
+}
+
+.Our-skills .container .Testimonials .Content img {
+    width: 100px;
+    height: 100px;
+}
+
+.Our-skills .container .Testimonials .Content .Text {
+    border-bottom: 1px solid #000;
+    color: var(--text-color);
+}
+
+.Our-skills .container .Testimonials .Content .Text p {
+    text-align: end;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #000;
+}
+
+.Our-skills .container .Bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaa;
+}
+
+.Our-skills .container .Bullets li.Active {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* start skills */
+
+.Our-skills .container .Skills .Prog-holder {
+    margin-bottom: 40px;
+}
+
+.Our-skills .container .Skills .Prog-holder h4 {
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.Our-skills .container .Skills .Prog-holder .Prog {
+    background-color: #ddd;
+    height: 40px;
+}
+
+.Our-skills .container .Skills .Prog-holder .Prog span {
+    display: block;
+    position: relative;
+    background-color: var(--main-color);
+    height: 100%;
+}
+
+.Our-skills .container .Skills .Prog-holder .Prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    top: -50px;
+    right: -20px;
+    color: white;
+    background-color: #000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.Our-skills .container .Skills .Prog-holder .Prog span::after {
+    content: "";
+    border-width: 8px;
+    border-style: solid;
+    border-color: #000 transparent transparent;
+    position: absolute;
+    top: -17px;
+    right: -8px;
+}
+
+/*************** End skills ***************/
+
+/*************** Start quote ***************/
+.Quote {
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+.Quote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+
+.Quote .container {
+    position: relative;
+}
+
+.Quote .container q {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 2;
+}
+
+.Quote .container q::before {
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+}
+
+.Quote .container q::after {
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free';
+}
+
+@media (max-width: 767px) {
+    .Quote .container q {
+        font-size: 20px;
+    }
+}
+
+.Quote .container span {
+    display: block;
+    margin-top: 40px;
+}
+
+/*************** End quote ***************/
+
+/*************** Start Pricing ***************/
+.Pricing .container .Plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.Pricing .container .Plans .Plan {
+    text-align: center;
+    background-color: #fcfcfc;
+}
+
+.Pricing .container .Plans .Plan .Head {
+    padding: 40px 20px;
+    border-bottom: 1px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+}
+
+.Pricing .container .Plans .Plan .Head h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.Pricing .container .Plans .Plan .Head span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.Pricing .container .Plans .Plan .Head span::before {
+    content: "$";
+    position: relative;
+    font-size: 25px;
+    font-weight: normal;
+    top: -40px;
+    margin-right: 15px;
+}
+
+.Pricing .container .Plans .Plan .Head span::after {
+    content: "/mo";
+    text-transform: uppercase;
+    font-size: 25px;
+    position: relative;
+    right: -15px;
+}
+
+.Pricing .container .Plans .Plan ul {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.Pricing .container .Plans .Plan ul li {
+    padding: 20px;
+    position: relative;
+}
+
+.Pricing .container .Plans .Plan ul li:not(:last-of-type)::after {
+    content: "";
+    background-color: var(--main-color);
+    height: 1px;
+    position: absolute;
+    width: 135px;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.Pricing .container .Plans .Plan .Foot {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.Pricing .container .Plans .Plan .Foot a {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 20px;
+    color: #000;
+    border: 1px solid var(--main-color);
+}
+
+.Pricing .container .Contact-text {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+}
+
+.Pricing .container .Contact-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    padding: 15px 30px;
+    color: white;
+    background-color: var(--main-color);
+    font-weight: bold;
+}
+
+
+.Pricing .container .Contact-link:hover {
+    background-color: #dbd4d4;
+    color: var(--main-color);
+    box-shadow: -6px 3px 0 var(--transparent-color);
+}
+
+/*************** End Pricing ***************/
+
+/*************** Start subscripe ***************/
+.Subscripe {
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.Subscripe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.Subscripe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .Subscripe .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.Subscripe .container form {
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.Subscripe .container form svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    cursor: pointer;
+}
+
+.Subscripe .container form input[type="email"] {
+    width: calc(100% - 130px);
+    padding: 20px 20px 20px 60px;
+    background: none;
+    border: 1px solid #fff;
+    border-right: 0;
+    caret-color: var(--main-color);
+    color: #fff;
+}
+
+.Subscripe .container form input[type="email"]::placeholder {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.Subscripe .container form input[type="email"]:focus {
+    outline: none;
+}
+
+.Subscripe .container form input[type="submit"] {
+    width: 130px;
+    border: 1px solid #fff;
+    border-left: none;
+    background-color: var(--main-color);
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.Subscripe .container p {
+    margin-left: 50px;
+    line-height: 2;
+}
+
+@media (max-width: 991px) {
+    .Subscripe .container p {
+        margin: 30px 0 0;
+    }
+}
+
+/*************** End subscripe ***************/
+
+/*************** Start Contact ***************/
+.Contact .container .Content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .Contact .container .Content {
+        flex-direction: column;
+    }
+}
+
+.Contact .container .Content form {
+    flex-basis: 70%;
+}
+
+.Contact .container .Content form .Main-input:focus {
+    outline: none;
+}
+
+.Contact .container .Content form .Main-input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.Contact .container .Content form textarea {
+    height: 200px;
+}
+
+.Contact .container .Content form input[type="submit"] {
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 20px;
+    text-transform: uppercase;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.Contact .container .Content .Info {
+    flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+    .Contact .container .Content .Info {
+        order: -1;
+        text-align: center;
+        display: flex;
+        margin-bottom: 50px;
+        justify-content: center;
+    }
+}
+
+.Contact .container .Content .Info h4 {
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.Contact .container .Content .Info .Num .Phone {
+    display: block;
+    margin: 0 0 10px;
+    color: var(--text-color);
+}
+
+.Contact .container .Content .Info .Address {
+    margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+    .Contact .container .Content .Info .Address {
+        margin-top: 0;
+        margin-left: 20px;
+    }
+}
+
+.Contact .container .Content .Info .Address address {
+    line-height: 2;
+    color: var(--text-color);
+}
+
+/*************** End Contact ***************/
+
+/*************** start footer ***************/
+.Footer {
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding-top: calc(var(--main-padding) / 2);
+    padding-bottom: calc(var(--main-padding) / 2);
+
+}
+
+.Footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.Footer .container {
+    position: relative;
+}
+
+.Footer .container .Logo div span {
+    font-size: 20px;
+}
+
+.Footer .container .Logo div svg {
+    font-size: 30px;
+}
+
+.Footer .container p:nth-of-type(1) {
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 22px;
+    width: fit-content;
+    border-bottom: 1px solid #fff;
+}
+
+.Footer .container .Social-links svg {
+    padding: 10px 15px;
+}
+
+.Footer .container .Copyright {
+    margin-top: 60px;
+}
+
+.Footer .container .Copyright span {
+    color: var(--main-color);
+    font-weight: bold;
+    transform: skewX(350deg);
+    display: inline-block;
+}
+
+/*************** End footer ***************/
