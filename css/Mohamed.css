@@ -467,9 +467,6 @@ header .container nav form svg {
 .Quote {
     background-image: url(../images/quote.jpg);
     background-size: cover;
-    position: relative;
-    color: #fff;
-    text-align: center;
     padding-top: 100px;
     padding-bottom: 30px;
 }
@@ -484,17 +481,6 @@ header .container nav form svg {
     background-color: rgb(0 0 0 / 75%);
 }
 
-.Quote .container {
-    position: relative;
-}
-
-.Quote .container q {
-    font-size: 30px;
-    display: block;
-    margin-bottom: 20px;
-    line-height: 2;
-}
-
 .Quote .container q::before {
     font-weight: 900;
     font-family: 'Font Awesome 5 Free';
@@ -505,27 +491,13 @@ header .container nav form svg {
     font-family: 'Font Awesome 5 Free';
 }
 
-@media (max-width: 767px) {
-    .Quote .container q {
-        font-size: 20px;
-    }
-}
-
-.Quote .container span {
-    display: block;
-    margin-top: 40px;
-}
-
 /*************** End quote ***************/
 
 /*************** Start Pricing ***************/
-.Pricing .container .Plans {
-    gap: 30px;
-}
 
 .Pricing .container .Plans .Plan {
     background-color: #fcfcfc;
-    max-width: calc(25% - 30px);
+    min-width: calc(25% - 30px);
 }
 
 .Pricing .container .Plans .Plan .Head {
