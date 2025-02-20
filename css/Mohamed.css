@@ -559,8 +559,6 @@ header .container nav form svg {
 .Subscripe {
     background-image: url(../images/subscribe.jpg);
     background-size: cover;
-    position: relative;
-    color: #fff;
 }
 
 .Subscripe::before {
@@ -573,29 +571,11 @@ header .container nav form svg {
     background-color: rgb(0 0 0 / 50%);
 }
 
-.Subscripe .container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-@media (max-width: 991px) {
-    .Subscripe .container {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 .Subscripe .container form {
     width: 500px;
-    max-width: 100%;
-    display: flex;
-    position: relative;
 }
 
 .Subscripe .container form svg {
-    position: absolute;
-    top: 50%;
     transform: translateY(-50%);
     left: 25px;
     cursor: pointer;
@@ -603,12 +583,9 @@ header .container nav form svg {
 
 .Subscripe .container form input[type="email"] {
     width: calc(100% - 130px);
-    padding: 20px 20px 20px 60px;
-    background: none;
     border: 1px solid #fff;
     border-right: 0;
     caret-color: var(--main-color);
-    color: #fff;
 }
 
 .Subscripe .container form input[type="email"]::placeholder {
@@ -625,20 +602,11 @@ header .container nav form svg {
     border: 1px solid #fff;
     border-left: none;
     background-color: var(--main-color);
-    color: #fff;
-    text-transform: uppercase;
     cursor: pointer;
 }
 
 .Subscripe .container p {
     margin-left: 50px;
-    line-height: 2;
-}
-
-@media (max-width: 991px) {
-    .Subscripe .container p {
-        margin: 30px 0 0;
-    }
 }
 
 /*************** End subscripe ***************/
